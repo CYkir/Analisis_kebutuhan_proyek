@@ -1,0 +1,647 @@
+<section class="flex flex-col gap-6">
+  <div class="mt-8 shadow-2xl mx-auto w-11/12 py-8 rounded-3xl border-y-3  border-amber-300">
+    <div class="flex flex-col justify-center justify-items-center gap-4">
+
+      <h2 class="text-5xl text-center font-bold">Download Dokumen SRS</h2>
+      <div class="mx-auto w-6/12">
+
+        <p class="text-xl text-gray-400 text-center">
+          Klik tombol di bawah untuk mengunduh dokumen Software Requirement
+          Specification (SRS) lengkap dalam format PDF
+        </p>
+      </div>
+
+      <div class="text-center mx-auto">
+        <button id="print-btn" class="btn btn-warning text-white" onclick="window.print()">Download SRS (pdf)</button>
+      </div>
+    </div>
+
+
+    <div class=" py-8 px-5 min-h-fit">
+      <div
+        class="mt-8 shadow-md mx-auto py-8 px-5 pe-5 rounded-3xl w-fit border-1 border-gray-400 h-[700px] overflow-y-auto ">
+        <div id="srs-content">
+          <div class="flex flex-col gap-2 max-w-fit md:w-3xl mx-auto justify-center justify-items-center p-3">
+            <h2 class="text-3xl leading-12 font-bold text-center">
+              SOFTWARE REQUIREMENT SPECIFICATION (SRS)
+            </h2>
+            <h3 class="text-xl py-1 font-bold text-center">Platform E-Commerce UMKM Lokal</h3>
+            <p class="text-xl text-center">Versi 1.0</p>
+            <p class="text-lg text-center">
+              <span id="tanggal"></span>
+            </p>
+
+            <div class=" bg-amber-300 h-1 w-full mx-auto text-center"> </div>
+            <!-- pendahuluan  -->
+
+            <div class="max-w-3xl mx-auto space-y-6 mt-4">
+              <h1 class="text-xl font-bold mb-2">1. PENDAHULUAN</h1>
+
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">1.1 Tujuan Dokumen</h2>
+                <p>
+                  Dokumen ini menjelaskan spesifikasi kebutuhan sistem untuk
+                  <span class="font-medium">Platform E-Commerce UMKM Lokal</span>.
+                </p>
+                <p>
+                  Dokumen ini ditujukan untuk tim pengembang, stakeholder, dan pihak terkait yang
+                  terlibat dalam pengembangan serta implementasi sistem.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">1.2 Ruang Lingkup Sistem</h2>
+                <p>
+                  <span class="font-medium">Platform E-Commerce UMKM Lokal</span> adalah aplikasi berbasis web
+                  yang dirancang untuk membantu pelaku UMKM menjual produk mereka secara online kepada
+                  konsumen lokal.
+                </p>
+                <p>
+                  Sistem ini mendukung fitur transaksi digital, integrasi pembayaran, manajemen produk,
+                  pengiriman, serta dashboard admin untuk monitoring.
+                </p>
+              </div>
+              <div class="max-w-3xl mx-auto space-y-6">
+                <h2 class="text-lg font-semibold">1.3 Definisi dan Akronim</h2>
+
+                <div class="overflow-x-auto">
+                  <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
+                    <thead class="bg-amber-300 text-gray-800">
+                      <tr>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Akronim</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Definisi</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-4 py-2">SRS</td>
+                        <td class="px-4 py-2">Software Requirement Specification</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">FR</td>
+                        <td class="px-4 py-2">Functional Requirement</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">NFR</td>
+                        <td class="px-4 py-2">Non-Functional Requirement</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">UI</td>
+                        <td class="px-4 py-2">User Interface</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">API</td>
+                        <td class="px-4 py-2">Application Programming Interface</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">UMKM</td>
+                        <td class="px-4 py-2">Usaha Mikro, Kecil, dan Menengah</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESKRIPSI UMUM -->
+            <div class="max-w-3xl mx-auto space-y-6 mt-4">
+              <h1 class="text-xl font-bold mb-2">2. DESKRIPSI UMUM</h1>
+
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">2.1 Perspektif Produk</h2>
+                <p>
+                  Sistem ini merupakan aplikasi web yang akan menjadi platform penghubung antara
+                  penjual UMKM, pembeli, kurir, bank/payment gateway, dan admin Dinas Koperasi.
+                </p>
+                <p>
+                  Aplikasi akan terintegrasi dengan layanan pembayaran digital dan sistem pelacakan pengiriman.
+                </p>
+              </div>
+
+              <!-- Fungsi Produk -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">2.2 Fungsi Produk</h2>
+                <ul class="list-disc list-inside space-y-1 ml-4">
+                  <li>Manajemen akun pengguna (UMKM, Pembeli, Admin, Kurir)</li>
+                  <li>Manajemen produk UMKM</li>
+                  <li>Transaksi online dan integrasi pembayaran</li>
+                  <li>Pelacakan pesanan dan status pengiriman</li>
+                  <li>Dashboard analitik untuk admin dan UMKM</li>
+                  <li>Fitur ulasan dan rating produk</li>
+                </ul>
+              </div>
+
+              <div class="max-w-4xl mx-auto space-y-6">
+                <h2 class="text-lg font-semibold">2.3 Karakteristik Pengguna</h2>
+
+                <div class="overflow-x-auto">
+                  <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
+                    <thead class="bg-amber-300 text-gray-800">
+                      <tr>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Tipe Pengguna</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Karakteristik</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Tingkat Keahlian</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-4 py-2">Penjual UMKM</td>
+                        <td class="px-4 py-2">Menjual produk, mengelola toko</td>
+                        <td class="px-4 py-2">Basic–Intermediate</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Pembeli</td>
+                        <td class="px-4 py-2">Membeli produk, melakukan pembayaran</td>
+                        <td class="px-4 py-2">Basic</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Admin Platform</td>
+                        <td class="px-4 py-2">Mengelola data dan memonitor sistem</td>
+                        <td class="px-4 py-2">Advanced</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Kurir</td>
+                        <td class="px-4 py-2">Melacak dan mengupdate status pengiriman</td>
+                        <td class="px-4 py-2">Basic</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Dinas Koperasi</td>
+                        <td class="px-4 py-2">Melihat laporan dan statistik UMKM</td>
+                        <td class="px-4 py-2">Intermediate</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- KEBUTUHAN FUNGSIONAL. -->
+            <div class="max-w-3xl space-y-6 mt-4">
+
+              <h1 class="text-xl font-bold mb-4">3. Kebutuhan Fungsional</h1>
+
+              <!-- 3.1 Modul Manajemen Pengguna -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">3.1 Modul Manajemen Pengguna</h2>
+
+                <!-- FR-001 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-001: Registrasi Pengguna</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Deskripsi:</span>
+                      <span>Sistem menyediakan form registrasi untuk UMKM dan pembeli.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Input:</span>
+                      <span>Nama, email, password, nomor HP.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>Validasi data dan verifikasi email.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Akun aktif dan terdaftar.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- FR-002 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-002: Login & Autentikasi</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Input:</span>
+                      <span>Email dan password.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>Validasi kredensial, token session (JWT).</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Redirect ke dashboard sesuai role.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 3.2 Modul Produk dan Katalog -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">3.2 Modul Produk dan Katalog</h2>
+
+                <!-- FR-010 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-010: Manajemen Produk</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Deskripsi:</span>
+                      <span>Penjual dapat menambah, mengedit, dan menghapus produk.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Input:</span>
+                      <span>Nama produk, harga, deskripsi, foto, stok.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>CRUD operation, validasi gambar.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Produk tersimpan dan tampil di katalog.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- FR-011 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-011: Pencarian & Filter Produk</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Input:</span>
+                      <span>Kata kunci (nama, kategori, harga).</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>Query database dengan filter.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Daftar produk sesuai kriteria.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 3.3 Modul Transaksi dan Pembayaran -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">3.3 Modul Transaksi dan Pembayaran</h2>
+
+                <!-- FR-020 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-020: Checkout & Pembayaran Online</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Deskripsi:</span>
+                      <span>Pembeli dapat melakukan checkout dan pembayaran.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Input:</span>
+                      <span>Produk, alamat, metode pembayaran.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>Validasi data, integrasi payment gateway.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Status “Menunggu Pembayaran”.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- FR-021 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-021: Konfirmasi & Status Pesanan</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Proses:</span>
+                      <span>Update status pesanan dari penjual dan kurir.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Output:</span>
+                      <span>Status real-time (Diproses, Dikirim, Selesai).</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>High</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 3.4 Modul Admin & Laporan -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold">3.4 Modul Admin & Laporan</h2>
+
+                <!-- FR-030 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-030: Manajemen Pengguna & UMKM</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Deskripsi:</span>
+                      <span>Admin dapat melihat, menonaktifkan, atau memverifikasi akun.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>Medium</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- FR-031 -->
+                <div class="space-y-2">
+                  <h3 class="font-medium"><span>- </span>FR-031: Laporan Penjualan & Aktivitas</h3>
+                  <ul class="list-[lower-alpha] list-inside ml-6 space-y-1">
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Deskripsi:</span>
+                      <span>Sistem menghasilkan laporan penjualan UMKM dan transaksi.</span>
+                    </li>
+                    <li class="flex">
+                      <span class="w-32 font-semibold">Prioritas:</span>
+                      <span>Medium</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- KEBUTUHAN NONFUNGSIONAL. -->
+            <div class="max-w-3xl space-y-6 mt-4">
+
+              <h1 class="text-xl font-bold mb-4">4. Kebutihan Non-Fungsional</h1>
+
+              <!-- 4.1 Performance Requirements -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">4.1 Performance Requirements</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Response time maksimal 3 detik.</li>
+                  <li>Dapat menangani 100+ user bersamaan.</li>
+                  <li>Query database dioptimasi dengan indexing.</li>
+                </ul>
+              </div>
+
+              <!-- 4.2 Security Requirements -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">4.2 Security Requirements</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Password dienkripsi menggunakan bcrypt (salt 10).</li>
+                  <li>Seluruh komunikasi melalui HTTPS/SSL.</li>
+                  <li>JWT token untuk autentikasi session.</li>
+                  <li>Input validation & protection dari SQL Injection & XSS.</li>
+                </ul>
+              </div>
+
+              <!-- 4.3 Usability Requirements -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">4.3 Usability Requirements</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Responsive design (desktop, tablet, mobile).</li>
+                  <li>UI konsisten dengan komponen reusable.</li>
+                  <li>Notifikasi & indikator loading.</li>
+                </ul>
+              </div>
+
+              <!-- 4.4 Reliability Requirements -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">4.4 Reliability Requirements</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Uptime minimal 99%.</li>
+                  <li>Backup database otomatis setiap hari.</li>
+                  <li>Error logging & server monitoring real-time.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- SPESIFIKASI INTERFACE -->
+            <div class="max-w-3xl space-y-6 mt-4">
+
+              <h1 class="text-xl font-bold mb-4">5. Spesifikasi Interface</h1>
+
+              <!-- 5.1 User Interface -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">5.1 User Interface</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li><span class="font-semibold">Halaman Beranda:</span> Menampilkan produk UMKM, kategori, dan promo.
+                  </li>
+                  <li><span class="font-semibold">Dashboard Penjual:</span> Statistik penjualan, daftar produk,
+                    manajemen toko.</li>
+                  <li><span class="font-semibold">Halaman Pembeli:</span> Katalog produk, keranjang belanja, riwayat
+                    pesanan.</li>
+                  <li><span class="font-semibold">Dashboard Admin:</span> Kontrol pengguna, laporan transaksi, dan
+                    monitoring aktivitas.</li>
+                </ul>
+              </div>
+
+              <!-- 5.2 Hardware Interface -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">5.2 Hardware Interface</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Kompatibel dengan perangkat desktop & mobile.</li>
+                  <li>(Opsional) Barcode scanner untuk stok produk.</li>
+                </ul>
+              </div>
+
+              <!-- 5.3 Software Interface -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">5.3 Software Interface</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li><span class="font-semibold">Database:</span> MySQL 8.0</li>
+                  <li><span class="font-semibold">Payment Gateway:</span> Midtrans / Xendit API</li>
+                  <li><span class="font-semibold">Framework:</span> Node.js (Backend), React/Tailwind (Frontend)</li>
+                </ul>
+              </div>
+
+              <!-- 5.4 Communication Interface -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">5.4 Communication Interface</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li><span class="font-semibold">RESTful API:</span> Format JSON</li>
+                  <li><span class="font-semibold">Methods:</span> GET, POST, PUT, DELETE</li>
+                  <li><span class="font-semibold">Base URL:</span> https://api.umkm-platform.id/v1</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Model data -->
+            <div class="max-w-4xl  space-y-6">
+              <h1 class="text-xl font-bold mb-4">6. Model Data</h1>
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">6.1 Entitas Utama</h2>
+
+                <div class="overflow-x-auto">
+                  <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
+                    <thead class="bg-amber-300 text-gray-800">
+                      <tr>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Entitas</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Atribut Kunci</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-4 py-2">Users</td>
+                        <td class="px-4 py-2">id, nama, email, password, role</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Products</td>
+                        <td class="px-4 py-2">id, nama, harga, deskripsi, stok, kategori_id</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Orders</td>
+                        <td class="px-4 py-2">id, user_id, total, status, payment_status</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Payments</td>
+                        <td class="px-4 py-2">id, order_id, method, amount, status</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Shipments</td>
+                        <td class="px-4 py-2">id, order_id, kurir_id, status, resi</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Reviews</td>
+                        <td class="px-4 py-2">id, product_id, user_id, rating, komentar</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">6.2 Relasi Antar Entitas</h2>
+
+                <div class="overflow-x-auto">
+                  <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
+                    <thead class="bg-amber-300 text-gray-800">
+                      <tr>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Entitas 1</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Kardinalitas</th>
+                        <th class="px-4 py-2 text-left font-semibold border-b border-gray-300">Entitas 2</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-4 py-2">Users</td>
+                        <td class="px-4 py-2">1 → M</td>
+                        <td class="px-4 py-2">Orders</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Products</td>
+                        <td class="px-4 py-2">1 → M</td>
+                        <td class="px-4 py-2">Orders</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Orders</td>
+                        <td class="px-4 py-2">1 → 1</td>
+                        <td class="px-4 py-2">Payments</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Orders</td>
+                        <td class="px-4 py-2">1 → 1</td>
+                        <td class="px-4 py-2">Shipments</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2">Products</td>
+                        <td class="px-4 py-2">1 → M</td>
+                        <td class="px-4 py-2">Reviews</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONSTRAINTS & ASSUMPTIONS -->
+            <div class="max-w-3xl space-y-6 mt-">
+
+              <h1 class="text-xl font-bold mb-4 ">7. Constraints & Assumptions</h1>
+
+              <!-- 7.1 Design Constraints -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">7.1 Design Constraints</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Kompatibel dengan browser modern.</li>
+                  <li>Menggunakan open-source stack.</li>
+                  <li>Database MySQL untuk efisiensi biaya.</li>
+                </ul>
+              </div>
+
+              <!-- 7.2 Assumptions -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">7.2 Assumptions</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Pengguna memiliki akses internet dan email aktif.</li>
+                  <li>Server dengan uptime minimal 99%.</li>
+                  <li>Dukungan maintenance selama 2 tahun.</li>
+                </ul>
+              </div>
+
+              <!-- 7.3 Dependencies -->
+              <div class="space-y-2">
+                <h2 class="text-lg font-semibold">7.3 Dependencies</h2>
+                <ul class="list-disc list-inside ml-6 space-y-1">
+                  <li>Payment gateway & email service.</li>
+                  <li>SSL certificate untuk keamanan data.</li>
+                  <li>Cloud storage untuk backup produk & gambar.</li>
+                </ul>
+              </div>
+
+              <h1 class="text-xl font-bold mt-6 mb-4">8. Acceptance Criteria</h1>
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Semua fitur fungsional (FR-001 s.d FR-031) berjalan dengan baik.</li>
+                <li>Tidak terdapat bug kritis yang menghambat transaksi.</li>
+                <li>Waktu respon < 3 detik.</li>
+                <li>UAT disetujui oleh stakeholder (Dinas Koperasi, UMKM, dan Admin).</li>
+                <li>Dokumentasi teknis dan user manual telah tersedia.</li>
+                <li>Pelatihan telah dilakukan untuk pengguna dan admin.</li>
+              </ul>
+
+            </div>
+
+            <div class="mt-12 flex justify-end mx-auto me-8">
+              <div class="flex flex-col gap-6 justify-center mx-auto justify-items-center">
+                <div class="-mb-3">
+                  <h2>Medan,  <span id="tanggalTtd"></span></h2>
+                </div>
+                <div>
+                  <h1 class="font-bold text-lg">Di Setujui Oleh :</h1>
+                </div>
+                <div class="text-center items-center">
+                  <img src="../src/image/Muzakir.png" alt="QR-Code" width="100" class="text-center items-center">
+                </div>
+
+                <div>
+                  <div class="bg-black h-[2px] w-[120px]"></div>
+                </div>
+
+                <div>
+                  <h2 class="font-bold text-xl  -mt-5">MUZAKIR</h2>
+                  <h3 class="text-lg mt-2">Project Manager</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  
+</section>

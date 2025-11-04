@@ -1,0 +1,38 @@
+  /* 🌸 Saat mode print */
+html, body {
+    scroll-behavior: smooth !important; 
+}
+
+
+  @media print {
+    body * {
+      visibility: hidden;
+      /* Sembunyikan semua */
+    }
+
+    #srs-content,
+    #srs-content * {
+      visibility: visible;
+      /* Tampilkan hanya div target */
+    }
+
+    #srs-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    #print-btn {
+      display: none;
+      /* Tombol tidak dicetak */
+    }
+
+    /* 🌈 Tambahkan ini */
+    body {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+  }
