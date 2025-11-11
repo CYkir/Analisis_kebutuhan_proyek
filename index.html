@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="dist/output.css">
   <link rel="stylesheet" href="dist/custom.css">
   <script src="src/js/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="dist/aos.css" />
 </head>
 <body class="">
 
@@ -28,8 +29,21 @@
   </header>
 
       <nav class="mt-6  px-4 flex mx-auto justify-start gap-6 text-gray-600 font-medium w-11/12 border-b-4 border-amber-200 rounded-3xl py-3 shadow-3xl">
-      <button class="tab-link bg-amber-400 border-b-2 hover:bg-amber-400 hover:text-white border-amber-400   hover:cursor-pointer rounded-2xl py-2 px-4 text-white" data-file="pages/analisis.html">Analisis Kebutuhan</button>
+        
+           <button class="tab-link bg-amber-400 border-b-2 hover:bg-amber-400 hover:text-white border-amber-400   hover:cursor-pointer rounded-2xl py-2 px-4 text-white" data-file="pages/beranda.html">Beranda</button>
+
+
+      <button class="tab-link border-b-2 border-amber-400  hover:bg-amber-400 rounded-2xl hover:cursor-pointer py-2 px-4 hover:text-white  pb-2" data-file="pages/analisis.html">Analisis Kebutuhan</button>
+
       <button class="tab-link border-b-2 border-amber-400  hover:bg-amber-400 rounded-2xl hover:cursor-pointer py-2 px-4 hover:text-white  pb-2" data-file="pages/srs.html">Dokumen SRS</button>
+
+      <button class="tab-link border-b-2 border-amber-400  hover:bg-amber-400 rounded-2xl hover:cursor-pointer py-2 px-4 hover:text-white  pb-2" data-file="pages/teknologi.html">Teknologi Sistem</button>
+      
+      <button class="tab-link border-b-2 border-amber-400  hover:bg-amber-400 rounded-2xl hover:cursor-pointer py-2 px-4 hover:text-white  pb-2" data-file="pages/flowchart.html">Flowchart</button>
+      
+      <button class="tab-link border-b-2 border-amber-400  hover:bg-amber-400 rounded-2xl hover:cursor-pointer py-2 px-4 hover:text-white  pb-2" data-file="pages/pengesahan.html">Dokumen Pengesahan</button>
+
+
     </nav>
 
   <!-- Konten akan dimuat di sini -->
@@ -43,5 +57,9 @@
   </footer>
 
  <script type="module" src="src/js/script.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

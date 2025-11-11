@@ -45,11 +45,13 @@ function initPageScript(file) {
     import("./page-analisis.js").then((mod) => mod.initAnalisis());
   } else if (file.includes("srs.html")) {
     import("./page-srs.js").then((mod) => mod.initSRS());
+  } else if(file.includes("pengesahan.html")) {
+    import("./page-pengesahan.js").then((mod) => mod.initPengesahan());
   }
 }
 
 // Load default halaman analisis
-loadPage("pages/analisis.html");
+loadPage("pages/beranda.html");
 
 // Event untuk tab
 tabs.forEach((tab) => {
