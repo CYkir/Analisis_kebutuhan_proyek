@@ -1,0 +1,163 @@
+<section data-aos="fade-up" data-aos-duration="1500" class="flex flex-col gap-6">
+  <div class="mt-8 shadow-2xl mx-auto w-11/12 py-8 rounded-3xl border-y-4 border-amber-300">
+
+    <!-- Header -->
+    <div class="flex flex-col justify-center gap-4">
+      <h2 class="text-5xl text-center font-bold">Dokumen Pengesahan Proyek Data Sains</h2>
+      <div class="mx-auto w-7/12">
+        <p class="text-xl text-gray-500 text-center">
+          Dokumen resmi persetujuan proyek <span class="font-semibold">Optimasi Penjualan UMKM Keripik Nusantara</span>
+          menggunakan Data Sains.
+        </p>
+      </div>
+      <div class="text-center mt-4">
+        <button id="print-btn" class="btn btn-warning text-white" onclick="window.print()">
+          Download Dokumen (PDF)
+        </button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="py-8 px-5 min-h-fit">
+      <div
+        class="mt-8 shadow-md mx-auto py-8 px-5 pe-5 rounded-3xl w-fit border-1 border-gray-400 h-[700px] overflow-y-auto ">
+
+        <div id="srs-content" class="flex flex-col gap-4 max-w-fit md:w-3xl mx-auto p-3">
+
+          <!-- Title -->
+          <h2 class="text-3xl font-bold text-center">LEMBAR PENGESAHAN</h2>
+
+          <p class="text-lg text-center">
+            Proyek Data Sains: Optimalisasi Penjualan UMKM Keripik Nusantara<br>
+            <span class="font-medium">Versi 1.0</span><br>
+            <span id="tglPengesahan"></span>
+          </p>
+
+          <div class="bg-amber-300 h-1 w-full mx-auto"></div>
+
+          <!-- Deskripsi -->
+          <p class="text-lg">
+            Dokumen ini merupakan bentuk persetujuan resmi untuk memulai dan melaksanakan proyek Data Sains yang
+            bertujuan meningkatkan performa penjualan UMKM melalui analisis data, peramalan penjualan, segmentasi
+            pelanggan, dan rekomendasi produk.
+          </p>
+
+          <!-- Informasi Proyek -->
+          <h3 class="text-xl font-bold mt-4">1. Informasi Proyek</h3>
+
+          <ul class="list-disc ml-6 space-y-1 text-lg">
+            <li><strong>Nama Proyek:</strong> Optimalisasi Penjualan UMKM Keripik Nusantara</li>
+            <li><strong>Jenis Proyek:</strong> Data Sains</li>
+            <li><strong>Bidang:</strong> Teknik Informatika</li>
+            <li><strong>Tujuan:</strong> Memaksimalkan penjualan melalui prediksi penjualan & analisis perilaku konsumen
+            </li>
+          </ul>
+
+          <!-- Ruang Lingkup -->
+          <h3 class="text-xl font-bold mt-6">2. Ruang Lingkup Proyek</h3>
+
+          <ul class="list-decimal ml-6 space-y-1 text-lg">
+            <li>Business Understanding</li>
+            <li>Data Collection & Integration</li>
+            <li>Data Preparation</li>
+            <li>Feature Engineering</li>
+            <li>Modeling (Forecasting, Clustering, Recommendation)</li>
+            <li>Model Evaluation</li>
+            <li>Deployment API & Dashboard</li>
+          </ul>
+
+          <!-- Deliverables -->
+          <h3 class="text-xl font-bold mt-6">3. Deliverables Proyek</h3>
+
+          <ul class="list-decimal ml-6 space-y-1 text-lg">
+            <li>Dataset terstruktur & terdokumentasi</li>
+            <li>Model prediksi penjualan</li>
+            <li>Model segmentasi pelanggan</li>
+            <li>Dashboard performa produk</li>
+            <li>API deployment model</li>
+            <li>Laporan akhir & presentasi</li>
+          </ul>
+
+          <!-- Tim Proyek -->
+          <h3 class="text-xl font-bold mt-6">4. Tim Proyek</h3>
+
+          <div class="overflow-x-auto">
+            <table class="table w-full rounded-xl border border-gray-300 shadow-md">
+              <thead class="bg-amber-300 text-black font-bold">
+                <tr>
+                  <th>Nama</th>
+                  <th>Peran</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-amber-100">
+                  <td>Muzakir</td>
+                  <td>Project Manager / Data Scientist</td>
+                </tr>
+                <tr class="hover:bg-amber-100">
+                  <td>Andi</td>
+                  <td>Data Engineer</td>
+                </tr>
+                <tr class="hover:bg-amber-100">
+                  <td>Salsa</td>
+                  <td>UI/UX & Dashboard Designer</td>
+                </tr>
+                <tr class="hover:bg-amber-100">
+                  <td>Rafli</td>
+                  <td>Backend Model Deployment</td>
+                </tr>
+                <tr class="hover:bg-amber-100">
+                  <td>Yuni</td>
+                  <td>Quality Assurance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Persetujuan -->
+          <section class="mt-10">
+            <h3 class="text-xl font-bold mb-3">5. Persetujuan Proyek</h3>
+            <p class="text-lg">
+              Dengan dokumen ini, seluruh pihak yang terlibat menyatakan bahwa proyek layak dijalankan dan semua
+              detail teknis serta ruang lingkup telah dipahami.
+            </p>
+
+            <div class="mt-12 w-full">
+              <div class="flex justify-between items-start px-10">
+
+                <!-- Kiri - Klien -->
+                <div class="flex flex-col gap-6 text-center">
+                  <!-- Kanan - Project Manager -->
+                  <div class="flex flex-col gap-6 text-center">
+                    <div class="-mb-2">
+                      <h2>Medan, <span id="tanggalTtd"></span></h2>
+                    </div>
+                    <!-- <div>&nbsp;</div> spacer biar sejajar -->
+                    <h1 class="font-bold text-lg">Disahkan Oleh :</h1>
+
+                    <!-- TTD PM -->
+                    <div class="flex flex-col items-center">
+                      <img src="../src/image/Muzakir.png" alt="TTD PM" width="110">
+                      <div class="bg-black h-[2px] w-[150px] mt-2"></div>
+                      <h2 class="font-bold text-xl mt-1 uppercase">MUZAKIR</h2>
+                      <h3 class="text-lg mt-1">Project Manager</h3>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const today = new Date().toLocaleDateString("id-ID", { day: 'numeric', month: 'long', year: 'numeric' });
+  document.querySelectorAll("#tglPengesahan, #tglPengesahan2, #tglPengesahan3").forEach(el => el.textContent = today);
+</script>

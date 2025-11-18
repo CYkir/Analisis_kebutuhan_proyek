@@ -45,8 +45,10 @@ function initPageScript(file) {
     import("./page-analisis.js").then((mod) => mod.initAnalisis());
   } else if (file.includes("srs.html")) {
     import("./page-srs.js").then((mod) => mod.initSRS());
-  } else if(file.includes("pengesahan.html")) {
+  } else if (file.includes("pengesahan.html")) {
     import("./page-pengesahan.js").then((mod) => mod.initPengesahan());
+  } else if (file.includes("persetujuan.html")) {
+    import("./page-persetujuan.js").then((mod) => mod.initPersetujuan());
   }
 }
 
